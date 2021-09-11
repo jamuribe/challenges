@@ -8,11 +8,9 @@
 //   Remember, you can access object properties through either dot notation or[] notation.
 
 function truthCheck(collection, pre) {
-  // console.log(collection);
   return collection.every((el) => {
     return el[pre]
   })
-  // return pre;
 }
 
 truthCheck([{ "user": "Tinky-Winky", "sex": "male" }, { "user": "Dipsy", "sex": "male" }, { "user": "Laa-Laa", "sex": "female" }, { "user": "Po", "sex": "female" }], "sex");
