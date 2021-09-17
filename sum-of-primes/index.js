@@ -3,7 +3,7 @@
 
 // Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num.
 
-function sumPrimes(num) {
+function sumPrimes (num) {
   let result = 0;
   for (let i = 2; i <= num; i++) {
     if (checkPrime(i)) {
@@ -13,10 +13,10 @@ function sumPrimes(num) {
   return result;
 }
 
-function checkPrime(num) {
+function checkPrime (num) {
   for (let i = 2; i < num; i++) {
     if (num % i === 0) {
-      return false
+      return false;
     }
   }
   return true;

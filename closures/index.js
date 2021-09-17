@@ -10,7 +10,7 @@
 
 // If either argument isn't a valid number, return undefined.
 
-function addTogether(a, b) {
+function addTogether (a, b) {
   if (!arguments[1] && Number.isInteger(a)) {
     return (c) => {
       if (typeof (c) !== 'number') return undefined;
@@ -18,8 +18,7 @@ function addTogether(a, b) {
     };
   } else if (!Number.isInteger(a) || !Number.isInteger(b)) {
     return undefined;
-  }
-  else return a + b;
+  } else return a + b;
 }
 
 addTogether(2, 3);

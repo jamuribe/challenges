@@ -10,19 +10,17 @@
 
 function firstNonRepeatingLetter(s) {
   // Add your code here
-  console.log(s)
   let temp = 0; // update temp based on how many characters there are for a giving char
   for (let i = 0; i < s.length; i++) {
-    let char = `${s[i]}`
-    const re = RegExp(char, 'g')
-    // console.log(s.match(re).length)
+    let char = `${s[i]}`;
+    const re = RegExp(char, 'g' + 'i');
     if (s.match(re)) {
       temp = s.match(re).length;
     }
     if (temp === 1) {
-      return s[i]
+      return s[i];
     }
     temp = 0;
-
   }
+  return '';
 }

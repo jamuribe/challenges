@@ -3,12 +3,12 @@
 
 // Then return the rest of the array once the condition is satisfied, otherwise, arr should be returned as an empty array.
 
-function dropElements(arr, func) {
-  let newArr = [...arr];
+function dropElements (arr, func) {
+  const newArr = [...arr];
   while (newArr.length) {
-    let current = newArr.shift();
+    const current = newArr.shift();
     if (func(current) === true) {
-      return [current, ...newArr]
+      return [current, ...newArr];
     }
   }
   return newArr;

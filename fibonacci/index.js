@@ -6,17 +6,16 @@
 
 // For example, `sumFibs(10)` should return `10` because all odd Fibonacci numbers less than or equal to`10` are 1, 1, 3, and 5.
 
-function sumFibs(num) {
+function sumFibs (num) {
   if (num === 1) return num;
   let result = 0;
   let firstVal = 0;
   let secondVal = 1;
   let temp = 1;
-  function recur() {
+  function recur () {
     if (secondVal > num) {
       return result;
-    }
-    else {
+    } else {
       if (temp == 1 || temp % 2 !== 0) result += temp;
       temp = firstVal + secondVal;
       firstVal = secondVal;
