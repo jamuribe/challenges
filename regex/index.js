@@ -24,3 +24,14 @@ function firstNonRepeatingLetter(s) {
   }
   return '';
 }
+
+// Better and faster implementation
+
+function firstNonRepeatingLetter(s) {
+  for (let i in s) {
+    if (s.match(new RegExp(s[i], "gi")).length === 1) {
+      return s[i];
+    }
+  }
+  return '';
+}
