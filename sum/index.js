@@ -26,6 +26,12 @@ sumPrimes(10);
 
 // Sum of two strings. In the test there are really big numbers remember that
 
+// my solution
+function sumStrings(a, b) {
+  return (BigInt(a) + BigInt(b)).toString();
+}
+
+// somebody else solution
 function sumStrings(a, b) {
   var A = a.split(""), B = b.split(""), C = 0, R = "";
 
