@@ -19,13 +19,3 @@ describe('F3', function () {
     });
   });
 });
-
-
-// test.skip("f3", async () => {
-//   // How will you test f3
-// });
-
-// test.skip("float values", () => {
-//   // expect(13.98 + 6.58===20.56).toBeTruthy();
-//   // expect(13.98 + 6.58===20.56).toBeFalsy();
-// });
