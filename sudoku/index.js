@@ -88,13 +88,33 @@ function loopThrou(array) {
 //   [ 3, 6, 5, 8, 1, 7, 9, 2, 4 ],
 //   [ 8, 7, 9, 6, 4, 2, 1, 3, 5 ] ]))
 
-  // 1 = i < 3 && o <3
-  // 2 = i >= 3 && i < 6 && o < 3
-  // 3 = i > 6 && o < 3
-  // 4 = i < 3 && o > 3 && o < 6
-  // 5 = i >3 && i < 6 && o > 3 && o < 6
-  // 6 = i > 6 && o > 3 && o < 6
-  // 7 = i < 3 && o > 6
-  // 8 = i > 3 && i < 6 && o > 6
-  // 9 = i > 6 && o > 6
+// 1 = i < 3 && o <3
+// 2 = i >= 3 && i < 6 && o < 3
+// 3 = i > 6 && o < 3
+// 4 = i < 3 && o > 3 && o < 6
+// 5 = i >3 && i < 6 && o > 3 && o < 6
+// 6 = i > 6 && o > 3 && o < 6
+// 7 = i < 3 && o > 6
+// 8 = i > 3 && i < 6 && o > 6
+// 9 = i > 6 && o > 6
 
+// Somebody else solution
+
+function doneOrNot(board) {
+  var cols = [], regions = [];
+
+  for (var i = 0; i < 9; i++) {
+    cols[i] = [], regions[i] = [];
+    for (var j = 0; j < 9; j++) {
+      var row = Math.floor(i / 3) * 3 + Math.floor(j / 3);
+      var col = j % 3 + (i % 3) * 3;
+      regions[i].push(board[row][col]);
+      cols[i].push(board[j][i]);
+    }
+  }
+  return (valid(cols) && valid(board) && valid(regions)) ? "Finished!" : "Try again!";
+}
+
+function valid(numbers) {
+  return numbers.every(function (arr) { return arr.sort().join('') === '123456789' });
+}
